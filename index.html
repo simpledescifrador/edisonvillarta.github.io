@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Edison Villarta | Web & Android Developer</title>
+    <link rel="stylesheet" href="./assets/bulma.min.css" />
+
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @font-face {
+        font-family: "Eurostile Bold";
+        src: url(/fonts/EurostileBold.ttf);
+      }
+
+      ::-webkit-scrollbar {
+        display: none;
+      }
+
+      * {
+        font-family: "Montserrat", sans-serif;
+      }
+
+      .hero-body {
+        background-image: linear-gradient(
+            to bottom,
+            rgba(28, 189, 135, 0.856),
+            rgba(10, 65, 102, 0.849)
+          ),
+          url("images/my_image.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: top;
+      }
+
+      .center-logo {
+        float: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .logo {
+        position: relative;
+        font-family: "Permanent Marker", cursive;
+        bottom: 2px;
+      }
+
+      #social-media-icons a {
+        text-decoration-style: none;
+        color: white;
+      }
+
+      #social-media-icons a:hover {
+        color: lightgray;
+      }
+    </style>
+  </head>
+  <body>
+    <nav
+      class="navbar is-hidden"
+      role="navigation"
+      aria-label="main navigation"
+    >
+      <div class="navbar-brand">
+        <a class="navbar-item is-hidden-desktop">
+          <h1 class="title logo">
+            Edison Villarta
+          </h1>
+        </a>
+        <a
+          role="button"
+          class="navbar-burger"
+          data-target="navMenu"
+          aria-label="menu"
+          aria-expanded="false"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div class="center-logo navbar-brand">
+        <a class="navbar-item is-hidden-touch">
+          <h1 class="title logo">
+            Edison Villarta
+          </h1>
+        </a>
+      </div>
+
+      <div class="navbar-menu" id="navMenu">
+        <div class="navbar-start">
+          <a href="#about" class="navbar-item">
+            <h1 class="title is-6">ABOUT</h1>
+          </a>
+
+          <a class="navbar-item">
+            <h1 class="title is-6">SKILLS</h1>
+          </a>
+        </div>
+        <div class="navbar-end">
+          <a class="navbar-item">
+            <h1 class="title is-6">PROJECTS</h1>
+          </a>
+
+          <a class="navbar-item">
+            <h1 class="title is-6">CONTACTS</h1>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero is-fullheight is-dark">
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <h1 class="subtitle is-4">
+            Hi, I'm Edison Villarta a
+          </h1>
+          <h1
+            class="title is-1"
+            style="font-family: 'Eurostile Bold'; font-weight: 800;"
+          >
+            Web & Android Developer
+          </h1>
+          <h2 class="subtitle is-6">
+            Code beautifully simple things, and I design for the best
+            satisfaction.
+          </h2>
+          <div class="block" id="social-media-icons">
+            <a href="https://www.linkedin.com/in/edvillarta/" target="_blank">
+              <span class="icon">
+                <i class="fab fa-linkedin"></i>
+              </span>
+            </a>
+            <a href="https://github.com/simpledescifrador" target="_blank">
+              <span class="icon">
+                <i class="fab fa-github"></i>
+              </span>
+            </a>
+            <a href="https://www.facebook.com/proedvillarta" target="_blank">
+              <span class="icon">
+                <i class="fab fa-facebook"></i>
+              </span>
+            </a>
+          </div>
+          <a class="button is-primary" target="_blank" href="./assets/Edison Villarta - CV.pdf">
+            <span class="icon">
+              <i class="fas fa-download"></i>
+            </span>
+            <span>Download Resume</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <main class="container">
+    </main>
+  </body>
+  <script type="text/javascript">
+    //Navbar Burger Toggle Script
+    document.addEventListener("DOMContentLoaded", () => {
+      // Get all "navbar-burger" elements
+      const $navbarBurgers = Array.prototype.slice.call(
+        document.querySelectorAll(".navbar-burger"),
+        0
+      );
+      // Check if there are any navbar burgers
+      if ($navbarBurgers.length > 0) {
+        // Add a click event on each of them
+        $navbarBurgers.forEach((el) => {
+          el.addEventListener("click", () => {
+            // Get the target from the "data-target" attribute
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
+
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            el.classList.toggle("is-active");
+            $target.classList.toggle("is-active");
+          });
+        });
+      }
+    });
+  </script>
+</html>
