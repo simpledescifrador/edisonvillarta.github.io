@@ -3,191 +3,584 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Edison Villarta | Web & Android Developer</title>
-    <link rel="stylesheet" href="./assets/bulma.min.css" />
-
+    <meta name="description" content="Web & Android Developer Portfolio" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
-      defer
-      src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-177751622-1"
     ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-177751622-1");
+    </script>
+
+    <title>Edison Villarta | Fresh IT Graduate</title>
+
+    <link rel="manifest" href="site.webmanifest" />
+    <script
+      async
+      src="https://unpkg.com/pwacompat"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Bulma Minified CSS -->
+    <link rel="stylesheet" href="./assets/bulma.min.css" />
+    <!-- Bulma Tooltip -->
+    <link rel="stylesheet" href="./assets/bulma-tooltip.min.css" />
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="./assets/style.css" />
+    <!-- FontAwesome -->
+
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Permanent+Marker&display=swap"
       rel="stylesheet"
     />
-    <style>
-      @font-face {
-        font-family: "Eurostile Bold";
-        src: url(/fonts/EurostileBold.ttf);
-      }
-
-      ::-webkit-scrollbar {
-        display: none;
-      }
-
-      * {
-        font-family: "Montserrat", sans-serif;
-      }
-
-      .hero-body {
-        background-image: linear-gradient(
-            to bottom,
-            rgba(28, 189, 135, 0.856),
-            rgba(10, 65, 102, 0.849)
-          ),
-          url("images/my_image.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: top;
-      }
-
-      .center-logo {
-        float: none;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
-
-      .logo {
-        position: relative;
-        font-family: "Permanent Marker", cursive;
-        bottom: 2px;
-      }
-
-      #social-media-icons a {
-        text-decoration-style: none;
-        color: white;
-      }
-
-      #social-media-icons a:hover {
-        color: lightgray;
-      }
-    </style>
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+    ></script>
   </head>
   <body>
-    <nav
-      class="navbar is-hidden"
-      role="navigation"
-      aria-label="main navigation"
-    >
-      <div class="navbar-brand">
-        <a class="navbar-item is-hidden-desktop">
-          <h1 class="title logo">
-            Edison Villarta
-          </h1>
-        </a>
-        <a
-          role="button"
-          class="navbar-burger"
-          data-target="navMenu"
-          aria-label="menu"
-          aria-expanded="false"
-        >
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
+    <a href="#home" id="button-up" class="">
+      <span class="icon">
+        <i class="fas fa-chevron-up fa-2x"></i>
+      </span>
+      <p class="heading">Back to Top</p>
+    </a>
+
+    <header id="home">
+      <div class="container">
+        <nav class="my-navbar">
+          <div class="hamburger-bg">
+            <div class="hamburger-menu">
+              <div class="line line-1"></div>
+              <div class="line line-2"></div>
+              <div class="line line-3"></div>
+            </div>
+          </div>
+
+          <ul class="mynav-list">
+            <list class="mynavbar-item">
+              <a href="#home" class="mynav-link" onclick="hideNavBar()">Home</a>
+            </list>
+            <list class="mynavbar-item">
+              <a href="#about" class="mynav-link" onclick="hideNavBar()"
+                >About Me</a
+              >
+            </list>
+            <list class="mynavbar-item">
+              <a href="#skills" class="mynav-link" onclick="hideNavBar()"
+                >Skills</a
+              >
+            </list>
+            <list class="mynavbar-item">
+              <a href="#projects" class="mynav-link" onclick="hideNavBar()"
+                >Projects</a
+              >
+            </list>
+            <list class="mynavbar-item">
+              <a href="#contact" class="mynav-link" onclick="hideNavBar()"
+                >Contact Me</a
+              >
+            </list>
+          </ul>
+        </nav>
       </div>
 
-      <div class="center-logo navbar-brand">
-        <a class="navbar-item is-hidden-touch">
-          <h1 class="title logo">
-            Edison Villarta
-          </h1>
-        </a>
-      </div>
-
-      <div class="navbar-menu" id="navMenu">
-        <div class="navbar-start">
-          <a href="#about" class="navbar-item">
-            <h1 class="title is-6">ABOUT</h1>
-          </a>
-
-          <a class="navbar-item">
-            <h1 class="title is-6">SKILLS</h1>
-          </a>
+      <section class="hero is-fullheight is-dark">
+        <div class="hero-body">
+          <div class="container has-text-centered">
+            <h1 class="subtitle is-4">Hi, I'm Edison Villarta</h1>
+            <h1
+              class="title is-1"
+              style="font-family: 'Eurostile Bold'; font-weight: 800"
+            >
+              An Aspiring Web & Android Developer
+            </h1>
+            <h2 class="subtitle is-6">
+              I code beautifully simple things, and I design for the best
+              satisfaction.
+            </h2>
+            <div class="block" id="social-media-icons">
+              <a href="https://www.linkedin.com/in/edvillarta/" target="_blank">
+                <span class="icon">
+                  <i class="fab fa-linkedin"></i>
+                </span>
+              </a>
+              <a href="https://github.com/simpledescifrador" target="_blank">
+                <span class="icon">
+                  <i class="fab fa-github"></i>
+                </span>
+              </a>
+              <a href="https://www.facebook.com/proedvillarta" target="_blank">
+                <span class="icon">
+                  <i class="fab fa-facebook"></i>
+                </span>
+              </a>
+            </div>
+            <a
+              class="button is-primary"
+              target="_blank"
+              href="./assets/Edison Villarta - CV.pdf"
+            >
+              <span class="icon">
+                <i class="fas fa-download"></i>
+              </span>
+              <span>Download Resume</span>
+            </a>
+          </div>
         </div>
-        <div class="navbar-end">
-          <a class="navbar-item">
-            <h1 class="title is-6">PROJECTS</h1>
-          </a>
+      </section>
+    </header>
 
-          <a class="navbar-item">
-            <h1 class="title is-6">CONTACTS</h1>
-          </a>
+    <!-- MAIN CONTENT -->
+    <main>
+      <section
+        id="about"
+        class="section about is-medium has-background-primary-light has-text-centered is-long"
+      >
+        <div class="container">
+          <div class="columns is-centered">
+            <div class="column is-three-fifths">
+              <h1 class="title is-spaced is-size-3-desktop is-size-4-mobile">
+                Hello there. Let me explain a bit about myself
+              </h1>
+              <h2 class="subtitle is-size-5-desktop">
+                I'm a fresh IT graduate from University of Makati. I love coding
+                from the very start of taking my degree and I'm always
+                interested on developing applications to create a beautiful and
+                an simple way to make something useful.
+              </h2>
+            </div>
+          </div>
         </div>
-      </div>
-    </nav>
-
-    <section class="hero is-fullheight is-dark">
-      <div class="hero-body">
-        <div class="container has-text-centered">
-          <h1 class="subtitle is-4">
-            Hi, I'm Edison Villarta a
+      </section>
+      <section id="skills" class="section skills has-text-centered">
+        <div class="container is-narrow">
+          <div class="box">
+            <div class="content" style="padding: 40px">
+              <div class="columns is-centered is-desktop">
+                <div class="column">
+                  <figure class="image">
+                    <img
+                      class="is-skill-icon"
+                      src="/assets/icons/browser.svg"
+                      style="height: 64px"
+                    />
+                  </figure>
+                  <h1 class="title is-size-4 is-spaced">Web Developer</h1>
+                  <p class="px-4">
+                    I enjoy coding to bringing ideas to life in the browser.
+                  </p>
+                  <p class="list-title has-text-primary has-text-weight-normal">
+                    Languages I used:
+                  </p>
+                  <p>HTML, CSS, JavaScript, PHP, ASP.NET</p>
+                  <p class="list-title has-text-primary has-text-weight-normal">
+                    Development Tools:
+                  </p>
+                  <div class="columns is-mobile is-gapless">
+                    <div
+                      class="column is-one-quarter has-tooltip-arrow has-tooltip-bottom"
+                      data-tooltip="Visual Studio Code"
+                    >
+                      <figure class="image is-48x48">
+                        <img src="/assets/icons/vscode.png" alt="VS Code" />
+                      </figure>
+                    </div>
+                    <div
+                      class="column is-one-quarter has-tooltip-arrow has-tooltip-bottom"
+                      data-tooltip="Github"
+                    >
+                      <figure class="image is-48x48">
+                        <img
+                          src="https://icongr.am/devicon/github-original-wordmark.svg?size=128&color=2b2b2b"
+                          alt="Github"
+                        />
+                      </figure>
+                    </div>
+                    <div
+                      class="column is-narrow is-one-quarter has-tooltip-arrow has-tooltip-bottom"
+                      data-tooltip="Google Chrome"
+                    >
+                      <figure class="image is-48x48">
+                        <img
+                          src="https://icongr.am/devicon/chrome-original.svg?size=128&color=currentColor"
+                          alt="Google Chrome"
+                        />
+                      </figure>
+                    </div>
+                    <div
+                      class="column is-one-quarter has-tooltip-arrow has-tooltip-bottom"
+                      data-tooltip="Codeigniter"
+                    >
+                      <figure class="image is-48x48">
+                        <img
+                          src="https://icongr.am/devicon/codeigniter-plain.svg?size=128&color=e65405"
+                          alt="Codeigniter"
+                        />
+                      </figure>
+                    </div>
+                  </div>
+                  <div class="columns is-mobile is-gapless">
+                    <div
+                      class="column is-narrow is-one-quarter has-tooltip-arrow has-tooltip-bottom"
+                      data-tooltip="Mysql"
+                    >
+                      <figure class="image is-48x48">
+                        <img
+                          src="https://icongr.am/devicon/mysql-original-wordmark.svg?size=128&color=currentColor"
+                          alt="MySql"
+                        />
+                      </figure>
+                    </div>
+                    <div
+                      class="column is-one-quarter has-tooltip-arrow has-tooltip-bottom"
+                      data-tooltip="Heroku"
+                    >
+                      <figure class="image is-48x48">
+                        <img
+                          src="https://icongr.am/devicon/heroku-original-wordmark.svg?size=128&color=currentColor"
+                          alt="Heroku"
+                        />
+                      </figure>
+                    </div>
+                    <div
+                      class="column is-narrow is-one-quarter has-tooltip-arrow has-tooltip-bottom"
+                      data-tooltip="Mircosoft SQl Server"
+                    >
+                      <figure class="image is-48x48">
+                        <img
+                          src="https://seeklogo.com/images/M/microsoft-sql-server-logo-96AF49E2B3-seeklogo.com.png"
+                          alt="Microsoft SQL Server"
+                        />
+                      </figure>
+                    </div>
+                  </div>
+                </div>
+                <div class="column">
+                  <figure class="image">
+                    <img
+                      class="is-skill-icon"
+                      src="/assets/icons/app.svg"
+                      style="height: 64px"
+                    />
+                  </figure>
+                  <h1 class="title is-size-4 is-spaced">Android Developer</h1>
+                  <p class="px-4">
+                    I also like create application that can be portable.
+                  </p>
+                  <p class="list-title has-text-primary has-text-weight-normal">
+                    Languages I used:
+                  </p>
+                  <p>Java, Dart</p>
+                  <p class="list-title has-text-primary has-text-weight-normal">
+                    Development Tools:
+                  </p>
+                  <div class="columns is-mobile is-gapless">
+                    <div
+                      class="column is-narrow is-one-quarter has-tooltip-arrow has-tooltip-bottom"
+                      data-tooltip="Andriod Studio"
+                    >
+                      <figure class="image is-48x48">
+                        <img
+                          src="/assets/icons/android-studio.png"
+                          alt="Android Studio"
+                        />
+                      </figure>
+                    </div>
+                    <div
+                      class="column is-narrow is-one-quarter has-tooltip-arrow has-tooltip-bottom"
+                      data-tooltip="Visual Studio Code"
+                    >
+                      <figure class="image is-48x48">
+                        <img src="/assets/icons/vscode.png" alt="VS Code" />
+                      </figure>
+                    </div>
+                    <div
+                      class="column is-narrow is-one-quarter has-tooltip-arrow has-tooltip-bottom"
+                      data-tooltip="Flutter"
+                    >
+                      <figure class="image is-48x48">
+                        <img
+                          src="/assets/icons/flutter-logo.png"
+                          alt="Flutter"
+                        />
+                      </figure>
+                    </div>
+                    <div
+                      class="column is-narrow is-one-quarter has-tooltip-arrow has-tooltip-bottom"
+                      data-tooltip="Firebase"
+                    >
+                      <figure class="image is-48x48">
+                        <img
+                          src="/assets/icons/firebase.svg"
+                          alt="Firebase"
+                          style="height: 48px"
+                        />
+                      </figure>
+                    </div>
+                  </div>
+                  <div class="columns is-mobile is-gapless">
+                    <div
+                      class="column is-narrow is-one-quarter has-tooltip-arrow has-tooltip-bottom"
+                      data-tooltip="Postman"
+                    >
+                      <figure class="image is-48x48">
+                        <img src="/assets/icons/postman.png" alt="Postman" />
+                      </figure>
+                    </div>
+                    <div
+                      class="column is-narrow is-one-quarter has-tooltip-arrow has-tooltip-bottom"
+                      data-tooltip="Genymotion"
+                    >
+                      <figure class="image is-48x48">
+                        <img
+                          src="/assets/icons/Genymotion-Logo.png"
+                          alt="Genymotion"
+                        />
+                      </figure>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        id="projects"
+        class="section projects is-medium is-white has-text-centered"
+      >
+        <div class="container is-narrow">
+          <h1 class="title is-spaced is-size-3-desktop is-size-4-mobile">
+            My Projects
           </h1>
-          <h1
-            class="title is-1"
-            style="font-family: 'Eurostile Bold'; font-weight: 800;"
-          >
-            Web & Android Developer
-          </h1>
-          <h2 class="subtitle is-6">
-            Code beautifully simple things, and I design for the best
-            satisfaction.
+          <h2 class="subtitle is-size-5-desktop">
+            Here are my recent projects. Want to see more?
+            <a
+              href="https://github.com/simpledescifrador?tab=repositories"
+              target="_blank"
+              >Click here.</a
+            >
           </h2>
+          <div class="project-grid">
+            <div class="columns is-multiline is-mobile">
+              <div
+                class="column is-12-mobile is-half-tablet is-one-third-desktop"
+              >
+                <div class="card">
+                  <div class="card-content">
+                    <p class="title is-size-4-desktop is-size-5-mobile">
+                      Maka-Hanap: An Android Lost and Found System in Makati
+                      City
+                    </p>
+                    <p
+                      class="subtitle is-size-6-touch is-size-5-widescreen mt-2"
+                    >
+                      A mobile application that will cater lost and found
+                      services of Makati City.
+                    </p>
+
+                    <span class="tag is-primary mb-1">Thesis Project</span>
+                    <span class="tag is-warning mb-1">Android</span>
+                    <span class="tag is-light mb-1">Java</span>
+                    <span class="tag is-light mb-1">Bootstrap 3</span>
+                    <span class="tag is-light mb-1">Mysql</span>
+                    <span class="tag is-light mb-1"
+                      >Firebase Cloud Messaging</span
+                    >
+                    <span class="tag is-light mb-1">Google Maps</span>
+                  </div>
+                  <footer class="card-footer">
+                    <p class="card-footer-item">
+                      <span>
+                        <a
+                          href="https://github.com/simpledescifrador/Makahanap-A-Lost-and-Found-App-in-Makati-City"
+                          >View Source Code</a
+                        >
+                      </span>
+                    </p>
+                  </footer>
+                </div>
+              </div>
+              <div
+                class="column is-12-mobile is-half-tablet is-one-third-desktop"
+              >
+                <div class="card">
+                  <div class="card-content">
+                    <p class="title is-size-4-desktop is-size-5-mobile">
+                      Human Resource Document Request System (HRDRS)
+                    </p>
+                    <p
+                      class="subtitle is-size-6-touch is-size-5-widescreen mt-2"
+                    >
+                      A web application for Human Resource department for
+                      handling documents of the employees.
+                    </p>
+
+                    <span class="tag is-primary mb-1">Internship Project</span>
+                    <span class="tag is-warning mb-1">ASP.NET</span>
+                    <span class="tag is-light mb-1">C#</span>
+                    <span class="tag is-light mb-1">Bootstrap 4</span>
+                    <span class="tag is-light mb-1">SQL Server</span>
+                    <span class="tag is-light mb-1">SignalR</span>
+                    <span class="tag is-light mb-1">Google Suite</span>
+                  </div>
+                  <footer class="card-footer">
+                    <p class="card-footer-item">
+                      <span>
+                        <a href="https://github.com/simpledescifrador/HRDRS"
+                          >View Source Code</a
+                        >
+                      </span>
+                    </p>
+                  </footer>
+                </div>
+              </div>
+              <div
+                class="column is-12-mobile is-half-tablet is-one-third-desktop"
+              >
+                <div class="card">
+                  <div class="card-content">
+                    <p class="title is-size-4-desktop is-size-5-mobile">
+                      Attendance Monitoring System
+                    </p>
+                    <p
+                      class="subtitle is-size-6-touch is-size-5-widescreen mt-2"
+                    >
+                      An android and web application for school attendance using
+                      qrcode scanner.
+                    </p>
+
+                    <span class="tag is-primary mb-1">Freelance Project</span>
+                    <span class="tag is-warning mb-1"
+                      >Android & Codeigniter</span
+                    >
+                    <span class="tag is-light mb-1">Java & PHP</span>
+                    <span class="tag is-light mb-1">Bootstrap 3</span>
+                    <span class="tag is-light mb-1">Bootstrap</span>
+                    <span class="tag is-light mb-1">Mysql</span>
+                  </div>
+                  <footer class="card-footer">
+                    <p class="card-footer-item">
+                      <span>
+                        <a
+                          href="https://github.com/simpledescifrador/ams-with-qrcode"
+                          >View Source Code</a
+                        >
+                      </span>
+                    </p>
+                  </footer>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        id="contact"
+        class="section contact has-background-primary-light has-text-centered"
+      >
+        <div class="container">
+          <div class="columns is-centered">
+            <div class="column">
+              <h1 class="title is-spaced is-size-3-desktop is-size-4-mobile">
+                Let’s do something amazing. Reach me out.
+              </h1>
+              <nav class="level">
+                <div class="level-item has-text-centered">
+                  <div>
+                    <p class="heading">Mobile Number</p>
+                    <p class="title is-size-4-desktop is-size-5-mobile">
+                      +639293592977
+                    </p>
+                  </div>
+                </div>
+                <div class="level-item has-text-centered">
+                  <div>
+                    <p class="heading">Email</p>
+                    <p class="title is-size-4-desktop is-size-5-mobile">
+                      edtvillarta@outlook.com
+                    </p>
+                  </div>
+                </div>
+                <div class="level-item has-text-centered">
+                  <div>
+                    <p class="heading">Address</p>
+                    <p class="title is-size-4-desktop is-size-5-mobile">
+                      23 Wilshire St. Parkplace, Cainta, Rizal
+                    </p>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer
+        class="section is-primary is-small has-text-centered has-background-black-ter"
+      >
+        <div class="container is-narrow">
           <div class="block" id="social-media-icons">
-            <a href="https://www.linkedin.com/in/edvillarta/" target="_blank">
+            <a
+              href="https://www.linkedin.com/in/edvillarta/"
+              target="_blank"
+              data-tooltip="LinkedIn"
+            >
               <span class="icon">
                 <i class="fab fa-linkedin"></i>
               </span>
             </a>
-            <a href="https://github.com/simpledescifrador" target="_blank">
+            <a
+              href="https://github.com/simpledescifrador"
+              target="_blank"
+              data-tooltip="Github"
+            >
               <span class="icon">
                 <i class="fab fa-github"></i>
               </span>
             </a>
-            <a href="https://www.facebook.com/proedvillarta" target="_blank">
+            <a
+              href="https://www.facebook.com/proedvillarta"
+              target="_blank"
+              data-tooltip="Facebook"
+            >
               <span class="icon">
                 <i class="fab fa-facebook"></i>
               </span>
             </a>
           </div>
-          <a class="button is-primary" target="_blank" href="./assets/Edison Villarta - CV.pdf">
-            <span class="icon">
-              <i class="fas fa-download"></i>
-            </span>
-            <span>Download Resume</span>
-          </a>
+          <div class="made-by-bulma">
+            <a href="https://bulma.io"
+              ><img
+                src="https://bulma.io/images/made-with-bulma--white.png"
+                alt="Made with Bulma"
+                width="163"
+                height="31"
+            /></a>
+          </div>
+
+          <div class="copyright">
+            <span>Copyright 2020</span>
+            Created by Edison Villarta
+          </div>
         </div>
-      </div>
-    </section>
-    <main class="container">
+      </footer>
     </main>
   </body>
-  <script type="text/javascript">
-    //Navbar Burger Toggle Script
-    document.addEventListener("DOMContentLoaded", () => {
-      // Get all "navbar-burger" elements
-      const $navbarBurgers = Array.prototype.slice.call(
-        document.querySelectorAll(".navbar-burger"),
-        0
-      );
-      // Check if there are any navbar burgers
-      if ($navbarBurgers.length > 0) {
-        // Add a click event on each of them
-        $navbarBurgers.forEach((el) => {
-          el.addEventListener("click", () => {
-            // Get the target from the "data-target" attribute
-            const target = el.dataset.target;
-            const $target = document.getElementById(target);
 
-            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-            el.classList.toggle("is-active");
-            $target.classList.toggle("is-active");
-          });
-        });
-      }
-    });
+  <script src="./assets/script.js"></script>
+
+  <script type="text/javascript">
+    const myNavbar = document.querySelector(".my-navbar");
+    function hideNavBar() {
+      myNavbar.classList.toggle("change");
+    }
   </script>
 </html>
