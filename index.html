@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -38,18 +38,24 @@
     <!-- Custom Styles -->
     <link rel="stylesheet" href="./assets/style.css" />
     <!-- FontAwesome -->
-
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Permanent+Marker&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Animate on Scroll CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script
       defer
       src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
     ></script>
   </head>
   <body>
-    <a href="#home" id="button-up" class="">
+    <div id="loading">
+      <img id="loading-image" src="/assets/loader.gif" alt="Loading..." />
+    </div>
+
+    <a id="button-up" data-nav="button-up">
       <span class="icon">
         <i class="fas fa-chevron-up fa-2x"></i>
       </span>
@@ -69,25 +75,19 @@
 
           <ul class="mynav-list">
             <list class="mynavbar-item">
-              <a href="#home" class="mynav-link">Home</a>
+              <a class="mynav-link" data-nav="home">Home</a>
             </list>
             <list class="mynavbar-item">
-              <a href="#about" class="mynav-link"
-                >About Me</a
-              >
+              <a class="mynav-link" data-nav="about">About Me</a>
             </list>
             <list class="mynavbar-item">
-              <a href="#skills" class="mynav-link"
-                >Skills</a
-              >
+              <a class="mynav-link" data-nav="skills">Skills</a>
             </list>
             <list class="mynavbar-item">
-              <a href="#projects" class="mynav-link"
-                >Projects</a
-              >
+              <a class="mynav-link" data-nav="projects">Projects</a>
             </list>
             <list class="mynavbar-item">
-              <a href="#contact" class="mynav-link"
+              <a class="mynav-link" data-nav="contact"
                 >Contact Me</a
               >
             </list>
@@ -150,14 +150,16 @@
         <div class="container">
           <div class="columns is-centered">
             <div class="column is-three-fifths">
-              <h1 class="title is-spaced is-size-3-desktop is-size-4-mobile">
+              <h1
+                class="title is-spaced is-size-3-desktop is-size-4-mobile"
+                data-aos="fade-up"
+              >
                 Hello there. Let me explain a bit about myself
               </h1>
-              <h2 class="subtitle is-size-5-desktop">
+              <h2 class="subtitle is-size-5-desktop" data-aos="zoom-out">
                 I'm a fresh IT graduate from University of Makati. I love coding
-                from the very start of taking my degree and I'm always
-                interested on developing applications to create a beautiful and
-                an simple way to make something useful.
+                and I'm always interested on developing applications to create a
+                beautiful and an simple way to make something useful.
               </h2>
             </div>
           </div>
@@ -168,7 +170,7 @@
           <div class="box">
             <div class="content">
               <div class="columns is-centered is-desktop">
-                <div class="column">
+                <div class="column mt-2 mb-2">
                   <figure class="image">
                     <img
                       class="is-skill-icon"
@@ -203,7 +205,7 @@
                     >
                       <figure class="image is-48x48">
                         <img
-                          src="https://icongr.am/devicon/github-original-wordmark.svg?size=128&color=2b2b2b"
+                          src="/assets/icons/github-original-wordmark.svg"
                           alt="Github"
                         />
                       </figure>
@@ -214,7 +216,7 @@
                     >
                       <figure class="image is-48x48">
                         <img
-                          src="https://icongr.am/devicon/chrome-original.svg?size=128&color=currentColor"
+                          src="/assets/icons/chrome-original.svg"
                           alt="Google Chrome"
                         />
                       </figure>
@@ -225,7 +227,7 @@
                     >
                       <figure class="image is-48x48">
                         <img
-                          src="https://icongr.am/devicon/codeigniter-plain.svg?size=128&color=e65405"
+                          src="/assets/icons/codeigniter-plain.svg"
                           alt="Codeigniter"
                         />
                       </figure>
@@ -236,7 +238,7 @@
                     >
                       <figure class="image is-48x48">
                         <img
-                          src="https://icongr.am/devicon/mysql-original-wordmark.svg?size=128&color=currentColor"
+                          src="/assets/icons/mysql-original-wordmark.svg"
                           alt="MySql"
                         />
                       </figure>
@@ -247,7 +249,7 @@
                     >
                       <figure class="image is-48x48">
                         <img
-                          src="https://icongr.am/devicon/heroku-original-wordmark.svg?size=128&color=currentColor"
+                          src="/assets/icons/heroku-original-wordmark.svg"
                           alt="Heroku"
                         />
                       </figure>
@@ -258,14 +260,14 @@
                     >
                       <figure class="image is-48x48">
                         <img
-                          src="https://seeklogo.com/images/M/microsoft-sql-server-logo-96AF49E2B3-seeklogo.com.png"
+                          src="/assets/icons/microsoft-sql-server-logo-96AF49E2B3-seeklogo.com.png"
                           alt="Microsoft SQL Server"
                         />
                       </figure>
                     </div>
                   </div>
                 </div>
-                <div class="column">
+                <div class="column mt-2 mb-2">
                   <figure class="image">
                     <img
                       class="is-skill-icon"
@@ -287,7 +289,7 @@
                   <div class="columns is-mobile is-multiline is-centered">
                     <div
                       class="column is-narrow is-one-quarter-desktop has-tooltip-arrow has-tooltip-bottom"
-                      data-tooltip="Andriod Studio"
+                      data-tooltip="Android Studio"
                     >
                       <figure class="image is-48x48">
                         <img
@@ -358,10 +360,13 @@
         class="section projects is-medium is-white has-text-centered"
       >
         <div class="container is-narrow">
-          <h1 class="title is-spaced is-size-3-desktop is-size-4-mobile">
+          <h1
+            class="title is-spaced is-size-3-desktop is-size-4-mobile"
+            data-aos="fade-up"
+          >
             My Projects
           </h1>
-          <h2 class="subtitle is-size-5-desktop">
+          <h2 class="subtitle is-size-5-desktop" data-aos="zoom-out">
             Here are my recent projects. Want to see more?
             <a
               href="https://github.com/simpledescifrador?tab=repositories"
@@ -374,7 +379,11 @@
               <div
                 class="column is-12-mobile is-half-tablet is-one-third-desktop"
               >
-                <div class="card">
+                <div
+                  class="card"
+                  data-aos="fade-right"
+                  data-aos-duration="1000"
+                >
                   <div class="card-content">
                     <p class="title is-size-4-desktop is-size-5-mobile">
                       Maka-Hanap: An Android Lost and Found System in Makati
@@ -412,7 +421,7 @@
               <div
                 class="column is-12-mobile is-half-tablet is-one-third-desktop"
               >
-                <div class="card">
+                <div class="card" data-aos="zoom-in" data-aos-duration="1000">
                   <div class="card-content">
                     <p class="title is-size-4-desktop is-size-5-mobile">
                       Human Resource Document Request System (HRDRS)
@@ -446,7 +455,7 @@
               <div
                 class="column is-12-mobile is-half-tablet is-one-third-desktop"
               >
-                <div class="card">
+                <div class="card" data-aos="fade-left" data-aos-duration="1000">
                   <div class="card-content">
                     <p class="title is-size-4-desktop is-size-5-mobile">
                       Attendance Monitoring System
@@ -491,7 +500,7 @@
           <div class="columns is-centered">
             <div class="column">
               <h1 class="title is-spaced is-size-3-desktop is-size-4-mobile">
-                Let’s do something amazing. Reach me out.
+                Let’s build something amazing. Reach me out.
               </h1>
               <nav class="level">
                 <div class="level-item has-text-centered">
@@ -580,6 +589,9 @@
       </footer>
     </main>
   </body>
-
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   <script src="./assets/script.js"></script>
 </html>
