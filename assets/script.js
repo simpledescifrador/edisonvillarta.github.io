@@ -5,14 +5,27 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuIcon = document.querySelector(".hamburger-menu");
   const myNavbar = document.querySelector(".my-navbar");
 
+  const navLinks = document.querySelectorAll(".mynav-link");
+
   menuIcon.addEventListener("click", () => {
-    myNavbar.classList.toggle("change");
+    toggleNavBar();
   });
 
   window.addEventListener("scroll", () => {
     changeHamburgerColor();
     showButtonUp();
   });
+
+  //Hide Navbar when navlink is clicked
+  navLinks.forEach((element) => {
+    element.addEventListener("click", () => {
+      toggleNavBar();
+    });
+  });
+
+  function toggleNavBar() {
+    myNavbar.classList.toggle("change");
+  }
 
   function changeHamburgerColor() {
     const hamburgerLine = document.querySelectorAll(".line");
